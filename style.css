@@ -342,16 +342,21 @@ body::before {
 }
 @keyframes pulse { 50% { opacity: 0.4; } }
 
-/* Live clock & date — sits in the hero meta line, green */
+/* Location + live clock — clock sits inline after "buffalo, ny ·" */
+.location-clock {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-wrap: wrap;
+}
 .clock {
   color: var(--accent);
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: baseline;
+  gap: 6px;
   font-family: 'JetBrains Mono', monospace;
 }
 .clock .clock-sep { color: var(--fg-faint); }
-.clock .clock-tz { color: var(--accent-dim); font-size: 10px; }
 
 .hero h1 {
   font-family: 'JetBrains Mono', monospace;
@@ -372,6 +377,17 @@ body::before {
   font-family: 'IBM Plex Mono', monospace;
 }
 .hero-tagline em { color: var(--accent); font-style: normal; }
+.tagline-link {
+  color: var(--secondary);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 180, 84, 0.4);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s, color 0.2s;
+}
+.tagline-link:hover {
+  color: var(--secondary);
+  text-decoration-color: var(--secondary);
+}
 
 .hero-links {
   display: flex;
@@ -742,6 +758,97 @@ body::before {
 .project[data-category="web"] .cat-tag { color: var(--cyan); border-color: rgba(127, 179, 196, 0.3); }
 .project[data-category="fun"] .cat-tag { color: var(--violet); border-color: rgba(183, 148, 217, 0.3); }
 .project[data-category="tools"] .cat-tag { color: var(--magenta); border-color: rgba(217, 111, 158, 0.3); }
+
+/* Secondary cat-tag — used when a project genuinely spans two categories.
+   Always renders in the cyan "web" color since that's the only place we use it now,
+   but the rule overrides whatever the parent's data-category styling sets. */
+.cat-tag-secondary {
+  color: var(--cyan) !important;
+  border-color: rgba(127, 179, 196, 0.3) !important;
+  margin-left: 4px;
+}
+
+/* Featured project — slightly elevated treatment for the showcase card */
+.project.project-featured {
+  border-left: 1.5px solid var(--secondary);
+  padding-left: 32px;
+}
+[data-theme="light"] .project.project-featured {
+  border-left-color: var(--secondary);
+}
+
+/* Microservices breakdown grid inside the featured card */
+.microservices {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 20px 0 18px;
+}
+.microservice {
+  background: var(--bg);
+  padding: 14px 16px;
+}
+.microservice-name {
+  font-size: 13px;
+  color: var(--fg);
+  font-weight: 500;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.microservice-lang {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--secondary);
+  background: var(--bg-soft);
+  border: 1px solid rgba(255, 180, 84, 0.25);
+  padding: 1px 7px;
+  border-radius: 2px;
+  font-weight: 400;
+}
+.microservice-role {
+  font-size: 12px;
+  color: var(--fg-dim);
+  line-height: 1.5;
+}
+
+.microservices-footnote {
+  font-size: 12.5px;
+  color: var(--fg-dim);
+  padding: 14px 16px;
+  background: var(--bg);
+  border: 1px dashed var(--border);
+  border-left: 1px solid var(--secondary);
+  margin: 14px 0 12px;
+  line-height: 1.6;
+  font-family: 'IBM Plex Mono', monospace;
+}
+.microservices-footnote strong {
+  color: var(--secondary);
+  font-weight: 500;
+}
+
+.microservices-folders {
+  font-size: 11px;
+  color: var(--fg-faint);
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 12px;
+  letter-spacing: 0.02em;
+}
+.microservices-folders code {
+  color: var(--fg-dim);
+  background: var(--bg-soft);
+  padding: 1px 6px;
+  border-radius: 2px;
+  font-size: 11px;
+  border: 1px solid var(--border);
+}
 
 /* "Current" status badge — cross-cuts categories, sits next to cat-tag.
    Amber so it's visually distinct from the green "systems" tag. */
