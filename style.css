@@ -778,6 +778,14 @@ body::before {
   color: var(--accent);
   font-style: normal;
 }
+/* Prose-paragraph version of an impact group (replaces the bullet list).
+   Slightly smaller and looser than body so it reads inside the bordered box. */
+.impact-paragraph {
+  font-size: 13px;
+  color: var(--fg-dim);
+  line-height: 1.65;
+  margin: 0;
+}
 .impact-process {
   margin-top: 16px;
   font-size: 12px;

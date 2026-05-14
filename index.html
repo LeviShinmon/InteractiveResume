@@ -53,7 +53,7 @@
 
   <section class="section hero">
     <div class="hero-meta">
-      <span class="status">open to learn</span>
+      <span class="status">open to new-grad SWE roles starting fall 2026</span>
       <span>·</span>
       <span class="location-clock" aria-label="Buffalo, NY current time">
         buffalo, ny ·
@@ -72,7 +72,7 @@
       adni <span class="accent">onoh</span>.
     </h1>
     <p class="hero-tagline">
-      Distributed systems engineer and full-stack web developer. Currently interning at a <em>healthtech startup</em> writing software that's helping people track and care for their mental health, building a personal project that combines my web and distributed systems experience (<a class="tagline-link" href="#projects">see Distributed Microservices Demo Suite ↓</a>), and interview prepping
+      Distributed systems engineer and full-stack web developer. Currently interning at a <em>healthtech startup</em> writing software that's helping people track and care for their mental health, building a personal project that combines my web and distributed systems experience (<a class="tagline-link" href="#projects">see Distributed Microservices Demo Suite ↓</a>), and interview prepping.
     </p>
     <div class="hero-links">
       <a href="#contact" class="primary">→ get in touch</a>
@@ -86,10 +86,11 @@
   <section class="section" id="about" aria-label="About">
     <div class="cmd"><span class="prompt">cat</span> about.md <span class="out"># readme · markdown</span></div>
     <div class="about-block">
-      <p class="comment">// the short version</p>
+      <p class="comment">// in a nutshell</p>
+      <p>Open to Learn</p>
       <p>For the last four years I've focused on <span class="inline-accent">systems engineering</span> (more recently distributed systems in particular) and <span class="inline-accent">web development</span>, alongside a concentration in communication.</p>
-      <p>In this time, I've gotten much better thinking about and understanding ideas/tasks from a software perspective, while still being able to communicate effectively with non-technical people. I like to think of it as being bilingual! (most likely cope because I have been unsuccessful at learning any languages other than English)</p>
-      <p class="comment">// status: open to roles starting fall 2026</p>
+      <p>In this time, I've gotten much better understanding ideas/tasks from a software perspective enough to implement them, without losing my ability to communicate effectively with non-technical people on the same topics. I like to think of it as being bilingual! (most likely cope because I have been unsuccessful at learning any languages other than English)</p>
+      <p class="comment">// status: open to new-grad SWE roles starting fall 2026</p>
     </div>
 
     <div class="stats">
@@ -121,13 +122,8 @@
         <div class="entry-title">Software Engineer <span class="at">@ Nara Therapy</span></div>
         <div class="entry-role">healthtech · agile · full-stack</div>
         <div class="entry-desc">
-          Working at a fast-paced startup with an agile team building features to give people continuous mental health tools that help <em>before, during, and after</em> a session.
-          <p>(<a class="tagline-link" href="#projects">see Nara Therapy - Production Features in the projects section below</a>)</p>
-          <!-- Building production features on a healthcare web app inside an agile team. Recent work:
-          <ul>
-            <li>Developed a responsive feedback modal that captures user insights while keeping interface consistency across mobile and desktop.</li>
-            <li>Added dashboard features — organization contact dates, organization deletion, and rating-based filters — following Figma designs and QA criteria so providers can spot low-rated sessions efficiently.</li>
-          </ul> -->
+          <p>Working at a fast-paced startup with an agile team building features to equip people with continuous mental health tools that help <span class="inline-accent"><em>before</em></span>, <span class="inline-accent"><em>during</em></span>, and <span class="inline-accent"><em>after</em></span> a session.</p>
+          <p>(<a class="tagline-link" href="#projects">Nara Therapy - Production Features in the projects section below ↓</a>)</p>
         </div>
       </div>
     </div>
@@ -143,7 +139,7 @@
           <li>Python</li>
           <li>Go</li>
           <li>C</li>
-          <li>HTML&CSS</li>
+          <li>HTML & CSS</li>
           <li>Node.js & Express & EJS</li>
           <li>Git/GitHub</li>
           <li>Figma</li>
@@ -251,7 +247,7 @@
           <div class="project-tech">Node.js · Go · Python · C · MongoDB · Docker</div>
         </div>
         <div class="project-desc">
-          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degredation when something fails.
+          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degradation when something fails.
           <div class="microservices">
             <div class="microservice">
               <div class="microservice-name">
@@ -303,79 +299,34 @@
             <span class="cat-tag">web</span>
             <span class="current-tag">current</span>
           </div>
-          <div class="project-tech">JavaScript · React · Figma · QA</div>
+          <div class="project-tech">TypeScript · React · Figma </div>
         </div>
         <div class="project-desc">
-          Nara's whole pitch is continuous mental health care. Three groups have to trust the platform for that to work: the <span class="inline-accent">members</span> getting care, the <span class="inline-accent">providers</span> delivering it, and the <span class="inline-accent">org admins</span> paying for it. My tickets have spanned all three.
+          Nara's pitch is continuous mental health care. I haven't worked much on the member-facing side of the product yet, but I've contributed across the parts that make it run: the tools providers use to deliver care, the dashboards org admins use to manage it, and the systems the Nara team uses to keep everything moving.
 
           <div class="impact-group">
-            <div class="impact-group-label">For providers — sharpening the clinical signal</div>
-            <ul class="impact-list">
-              <li>
-                <strong>Display &amp; filter client AI-chat ratings on the provider dashboard.</strong>
-                <span class="impact-detail">Providers can now sort their AI-therapy sessions by client rating and surface low-rated ones immediately. The whole product is built on continuity of care — this lets a provider catch a struggling client <em>before</em> the next session, not after.</span>
-              </li>
-              <li>
-                <strong>Surface high-risk journal entries.</strong>
-                <span class="impact-detail">Patient journals can contain critical risk indicators. Now those entries get flagged consistently with other high-risk sources so providers don't miss them.</span>
-              </li>
-              <li>
-                <strong>Show client feedback on the provider detail page.</strong>
-                <span class="impact-detail">Gives admins visibility into per-provider quality, client experience, and reported concerns in one place — so quality issues surface fast.</span>
-              </li>
-              <li>
-                <strong>Help the AI chatbot reference user data.</strong>
-                <span class="impact-detail">Worked on letting the chatbot pull from journal entries, mood check-ins, and gratitude logs. Conversations stop being generic and start feeling like the AI actually knows the person.</span>
-              </li>
-            </ul>
+            <div class="impact-group-label">For providers</div>
+            <p class="impact-paragraph">
+              I added a way to filter AI-chat sessions by client rating so low-rated interactions are noticed immediately, which lets a provider catch a struggling client <em>before</em> the next session. I also flagged high-risk journal entries alongside other risk indicators, displayed client feedback on the provider detail page, and helped the AI chatbot reference user journals, mood check-ins, and gratitude logs to tailor conversations to the user.
+            </p>
           </div>
 
           <div class="impact-group">
-            <div class="impact-group-label">For org admins — reducing friction for the customer</div>
-            <ul class="impact-list">
-              <li>
-                <strong>Plan selection &amp; default session count on org creation.</strong>
-                <span class="impact-detail">Organizations have different billing models (bulk vs. pay-per-invite). Supporting both in the dashboard, plus a default session count, removes manual input from the invite flow.</span>
-              </li>
-              <li>
-                <strong>Required organization-type field at creation.</strong>
-                <span class="impact-detail">A new required field that captures what kind of org is being onboarded — sets up future segmentation, reporting, and customization.</span>
-              </li>
-              <li>
-                <strong>Minimum seats &amp; adjustable annual mobile app fee.</strong>
-                <span class="impact-detail">Defines baseline billing rules so admins don't have to set them manually for every new org.</span>
-              </li>
-              <li>
-                <strong>Gate org dashboard metrics behind a minimum user threshold.</strong>
-                <span class="impact-detail">Hides organization-level metrics until there's enough data to mean something. Protects against misleading insights and creates a clear activation moment that nudges admins to invite more users.</span>
-              </li>
-              <li>
-                <strong>In-context feedback popup on the org dashboard.</strong>
-                <span class="impact-detail">Star rating + written feedback captured where admins already are, centralized into the admin feedback table. Closes the loop between paying customers and the team building the product their employees rely on.</span>
-              </li>
-            </ul>
+            <div class="impact-group-label">For org admins</div>
+            <p class="impact-paragraph">
+              Plan selection and a default session count on org creation let the dashboard handle both billing models (bulk and pay-per-invite) without manual input. A required organization-type field captures what kind of org is being onboarded, and minimum seats with an adjustable annual fee set baseline billing automatically. I also gated dashboard metrics behind a user threshold so admins don't see misleading numbers before there's real data, and built an in-context feedback popup that centralizes admin feedback into the main table.
+            </p>
           </div>
 
           <div class="impact-group">
-            <div class="impact-group-label">For the Nara team — better internal velocity</div>
-            <ul class="impact-list">
-              <li>
-                <strong>Organization contact dates on the admin dashboard.</strong>
-                <span class="impact-detail">Shows when an org first contacted Nara. Helps prioritize warm leads — every onboarded org is more employees getting mental health support.</span>
-              </li>
-              <li>
-                <strong>Org deletion controls.</strong>
-                <span class="impact-detail">Lets admins remove duplicate or accidental org entries instead of just rejecting them. Keeps the admin dashboard usable as it scales.</span>
-              </li>
-              <li>
-                <strong>User type column on the feedback table.</strong>
-                <span class="impact-detail">Tags feedback by who sent it — member, org admin, or provider — so the team can route, pattern-spot, and respond effectively instead of treating every comment the same.</span>
-              </li>
-            </ul>
+            <div class="impact-group-label">For the Nara team</div>
+            <p class="impact-paragraph">
+              Contact-date tracking shows when an org first reached out, helping the team prioritize warm leads. Deletion controls let admins clean up duplicate or accidental org entries instead of just rejecting them. And a user-type column on the feedback table tags every submission as coming from a member, org admin, or provider, so feedback can actually be routed and patterned instead of treated as one bucket.
+            </p>
           </div>
 
           <p class="impact-process">
-            <span class="inline-accent">// process:</span> all work follows Figma designs and team QA criterias.
+            <span class="inline-accent">// process:</span> all work follows Figma designs and team QA criteria.
           </p>
         </div>
       </div>
@@ -543,7 +494,7 @@
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          The site you're reading. I hope you enjoy using it! Try the command input at the top: <kbd class="inline-kbd">tree projects</kbd> works.
+          The site you're reading, built with just HTML/CSS/JS. I hope you enjoy using it! Try the command input at the top: <kbd class="inline-kbd">tree projects</kbd> works.
           <div class="project-actions">
             <a class="repo-link" href="https://github.com/LeviShinmon/InteractiveResume" target="_blank">⎘ view repo</a>
           </div>
