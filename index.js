@@ -272,9 +272,8 @@
     // Default placeholder rotates between a few hints
     const placeholders = [
       'type "tree projects" to see what I\'ve built ↓',
-      'try "tree projects" — that\'s where the good stuff is',
       'type a command (try "help" or "projects")',
-      'type "projects" — recruiter shortcut',
+      'type "projects"; recruiter shortcut',
     ];
     let defaultPlaceholder = placeholders[0];
 

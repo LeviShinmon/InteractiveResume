@@ -4,16 +4,16 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>adni onoh — ~/portfolio</title>
-<meta name="description" content="Adni Onoh — software engineer working across distributed systems and full-stack web. Buffalo, NY · graduating Spring 2026.">
+<meta name="description" content="Adni Onoh — distributed systems engineer and full-stack web developer. Buffalo, NY · graduating Spring 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
+
 <a class="skip-link" href="#main-content">skip to content</a>
- 
+
 <div class="window-chrome">
   <div class="dots">
     <span class="dot dot-r"></span>
@@ -48,50 +48,51 @@
     <span class="theme-label">light</span>
   </button>
 </div>
- 
+
 <main class="shell" id="main-content">
- 
+
   <section class="section hero">
     <div class="hero-meta">
-      <span class="status">open to new-grad SWE roles · open to learn</span>
+      <span class="status">open to new-grad SWE roles starting fall 2026</span>
       <span>·</span>
-      <span>buffalo, ny · ET</span>
+      <span class="location-clock" aria-label="Buffalo, NY current time">
+        buffalo, ny ·
+        <span class="clock">
+          <span id="clockDate">—</span>
+          <span class="clock-sep">·</span>
+          <span id="clockTime">—:—:—</span>
+          ET
+        </span>
+      </span>
       <span>·</span>
       <span>graduating spring 2026</span>
-      <span>·</span>
-      <span class="clock" aria-label="Current Buffalo time">
-        <span id="clockDate">—</span>
-        <span class="clock-sep">·</span>
-        <span id="clockTime">—:—:—</span>
-        <span class="clock-tz">ET</span>
-      </span>
     </div>
     <h1>
       <span class="dim">hi, I'm</span><br>
       adni <span class="accent">onoh</span>.
     </h1>
     <p class="hero-tagline">
-      software engineer working across <em>distributed systems</em> and <em>full-stack web</em>. recently: built a Raft consensus cluster in Go, a Kademlia-based DHT, and shipped production features at a healthtech startup.
+      Distributed systems engineer and full-stack web developer. Currently interning at a <em>healthtech startup</em> writing software that's helping people track and care for their mental health, building a personal project that combines my web and distributed systems experience (<a class="tagline-link" href="#projects">see Distributed Microservices Demo Suite ↓</a>), and interview prepping.
     </p>
     <div class="hero-links">
-      <a href="mailto:adnionoh@buffalo.edu" class="primary">→ get in touch</a>
+      <a href="#contact" class="primary">→ get in touch</a>
       <a href="#projects">view projects</a>
       <a href="https://1drv.ms/w/c/3b35ab7b8ee15eda/IQDfQgUKsM0GQL7ui5GmZOpuAesrrtbpkbjIAkxJ1DxPc0Q?e=AASBGp" target="_blank">paper resume</a>
       <a href="https://linkedin.com/in/adni-onoh" target="_blank">linkedin</a>
       <a href="https://github.com/LeviShinmon" target="_blank">github</a>
     </div>
   </section>
- 
+
   <section class="section" id="about" aria-label="About">
     <div class="cmd"><span class="prompt">cat</span> about.md <span class="out"># readme · markdown</span></div>
     <div class="about-block">
-      <p class="comment">// the short version</p>
-      <p>I'm graduating from the University at Buffalo in Spring 2026 with a B.A. in Computer Science and a concentration in Communication.</p>
-      <p>My coursework and side work split between two things that pull on each other: <span class="inline-accent">distributed systems &amp; backend</span> (where I've built a Raft consensus cluster, a Kademlia DHT, and a concurrent memory allocator) and <span class="inline-accent">full-stack web development</span> (where I currently ship production features at Nara Therapy).</p>
-      <p>The communication concentration shows up in how I work — writing user stories, reviewing teammates' code, and explaining trade-offs to non-engineers. It's been more useful than I expected.</p>
-      <p class="comment">// status: open to learn, open to roles starting summer 2026</p>
+      <p class="comment">// in a nutshell</p>
+      <p>Open to Learn</p>
+      <p>For the last four years I've focused on <span class="inline-accent">systems engineering</span> (more recently distributed systems in particular) and <span class="inline-accent">web development</span>, alongside a concentration in communication.</p>
+      <p>In this time, I've gotten much better understanding ideas/tasks from a software perspective enough to implement them, without losing my ability to communicate effectively with non-technical people on the same topics. I like to think of it as being bilingual! (most likely cope because I have been unsuccessful at learning any languages other than English)</p>
+      <p class="comment">// status: open to new-grad SWE roles starting fall 2026</p>
     </div>
- 
+
     <div class="stats">
       <div class="stat">
         <div class="stat-label">degree</div>
@@ -111,112 +112,103 @@
       </div>
     </div>
   </section>
- 
+
   <section class="section" id="work" aria-label="Work experience">
     <div class="cmd"><span class="prompt">ls</span> -la work/ <span class="out"># current role</span></div>
- 
+
     <div class="entry">
       <div class="entry-meta">May 2025 — Present</div>
       <div>
         <div class="entry-title">Software Engineer <span class="at">@ Nara Therapy</span></div>
         <div class="entry-role">healthtech · agile · full-stack</div>
         <div class="entry-desc">
-          Building production features on a healthcare web app inside an agile team. Recent work:
-          <ul>
-            <li>Developed a responsive feedback modal that captures user insights while keeping interface consistency across mobile and desktop.</li>
-            <li>Added dashboard features — organization contact dates, organization deletion, and rating-based filters — following Figma designs and QA criteria so providers can spot low-rated sessions efficiently.</li>
-          </ul>
+          <p>Working at a fast-paced startup with an agile team building features to equip people with continuous mental health tools that help <span class="inline-accent"><em>before</em></span>, <span class="inline-accent"><em>during</em></span>, and <span class="inline-accent"><em>after</em></span> a session.</p>
+          <p>(<a class="tagline-link" href="#projects">Nara Therapy - Production Features in the projects section below ↓</a>)</p>
         </div>
       </div>
     </div>
   </section>
- 
+
   <section class="section" id="skills" aria-label="Technical skills">
     <div class="cmd"><span class="prompt">grep</span> -r skills/ <span class="out"># grouped by frequency of use</span></div>
     <div class="skill-grid">
       <div class="skill-block">
         <h4>// daily use</h4>
         <ul class="skill-list">
-          <li>Go</li>
           <li>JavaScript</li>
           <li>Python</li>
-          <li>HTML/CSS</li>
-          <li>Node.js</li>
-          <li>Git</li>
+          <li>Go</li>
+          <li>C</li>
+          <li>HTML & CSS</li>
+          <li>Node.js & Express & EJS</li>
+          <li>Git/GitHub</li>
+          <li>Figma</li>
+
         </ul>
       </div>
       <div class="skill-block">
         <h4>// comfortable with</h4>
         <ul class="skill-list">
           <li>TypeScript</li>
-          <li>C</li>
           <li>React</li>
-          <li>Express</li>
-          <li>Flask</li>
-          <li>PostgreSQL</li>
           <li>MongoDB</li>
           <li>MySQL</li>
-          <li>Java</li>
-          <li>Figma</li>
+          <li>PostgreSQL</li>
+          <li>jQuery</li>
         </ul>
       </div>
       <div class="skill-block">
         <h4>// familiar with</h4>
         <ul class="skill-list">
+          <li>Flask</li>
           <li>OCaml</li>
-          <li>Scala</li>
           <li>PHP</li>
-          <li>EJS</li>
+          <li>Scala</li>
+          <li>Java</li>
           <li>R</li>
-          <li>jQuery</li>
-          <li>Protobuf</li>
-          <li>RPC</li>
         </ul>
       </div>
       <div class="skill-block">
         <h4>// practices</h4>
         <ul class="skill-list">
           <li>Scrum/Agile</li>
-          <li>User stories</li>
           <li>Shell scripting</li>
           <li>Debugging</li>
           <li>Code review</li>
-          <li>Jira</li>
-          <li>Trello</li>
         </ul>
       </div>
     </div>
- 
+
     <div class="css-demo">
       <div class="cmd cmd-demo"><span class="prompt">./</span>animate.sh <span class="out"># css demo · not a self-assessment</span></div>
       <div class="demo-note">
         <span class="demo-note-label">// note:</span>
-        the bars below are a CSS animation demo — a chance to play with <code>transition</code>, <code>transform</code>, and <code>@keyframes</code>. they show how much I've used each language while building this site, <strong>not</strong> any claim of skill level. for an honest proficiency picture, see the tags above.
+        the bars below are a simple CSS animation demo, a chance to play with <code>transition</code>, <code>transform</code>, and <code>@keyframes</code>. <strong>not</strong> a claim of skill level. for an honest proficiency picture, see the tags above.
       </div>
       <div class="skill-bars">
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">CSS</span><span class="bar-pct">90%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
+          <div class="bar-row"><span class="bar-name">CSS</span><span class="bar-pct">92%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="92"></div></div>
         </div>
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">HTML</span><span class="bar-pct">85%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="85"></div></div>
+          <div class="bar-row"><span class="bar-name">JavaScript</span><span class="bar-pct">68%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="68"></div></div>
         </div>
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">JavaScript</span><span class="bar-pct">75%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="75"></div></div>
+          <div class="bar-row"><span class="bar-name">HTML</span><span class="bar-pct">81%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="81"></div></div>
         </div>
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">Go</span><span class="bar-pct">70%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
+          <div class="bar-row"><span class="bar-name">Go</span><span class="bar-pct">40%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="40"></div></div>
         </div>
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">Python</span><span class="bar-pct">60%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
+          <div class="bar-row"><span class="bar-name">Python</span><span class="bar-pct">55%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="55"></div></div>
         </div>
         <div class="bar-item">
-          <div class="bar-row"><span class="bar-name">C</span><span class="bar-pct">45%</span></div>
-          <div class="bar-track"><div class="bar-fill" data-width="45"></div></div>
+          <div class="bar-row"><span class="bar-name">C</span><span class="bar-pct">82%</span></div>
+          <div class="bar-track"><div class="bar-fill" data-width="82"></div></div>
         </div>
       </div>
       <button id="animateBtn" class="animate-btn" type="button">
@@ -224,94 +216,82 @@
       </button>
     </div>
   </section>
- 
+
   <section class="section" id="projects" aria-label="Projects">
-    <div class="cmd"><span class="prompt">tree</span> projects/ <span class="out"># 16 entries · filter by category</span></div>
- 
+    <div class="cmd"><span class="prompt">tree</span> projects/ <span class="out"># 13 entries · filter by category</span></div>
+
     <div class="filter-bar" role="group" aria-label="Filter projects by category">
       <span class="filter-label" aria-hidden="true">filter:</span>
-      <button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">all <span class="count">16</span></button>
-      <button class="filter-chip filter-chip-current" data-filter="current" type="button" aria-pressed="false">● current <span class="count">6</span></button>
-      <button class="filter-chip" data-filter="systems" type="button" aria-pressed="false">distributed systems <span class="count">7</span></button>
-      <button class="filter-chip" data-filter="web" type="button" aria-pressed="false">web development <span class="count">5</span></button>
+      <button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">all <span class="count">13</span></button>
+      <button class="filter-chip filter-chip-current" data-filter="current" type="button" aria-pressed="false">● current <span class="count">3</span></button>
+      <button class="filter-chip" data-filter="systems" type="button" aria-pressed="false">distributed systems <span class="count">5</span></button>
+      <button class="filter-chip" data-filter="web" type="button" aria-pressed="false">web development <span class="count">4</span></button>
       <button class="filter-chip" data-filter="fun" type="button" aria-pressed="false">fun &amp; demos <span class="count">3</span></button>
       <button class="filter-chip" data-filter="tools" type="button" aria-pressed="false">tools &amp; misc <span class="count">1</span></button>
     </div>
- 
+
     <p class="projects-note"><span class="inline-accent">// note:</span> OOP principles and Git/GitHub version control applied across all projects. <span class="inline-current">● current</span> marks projects I'm actively building right now.</p>
- 
+
     <div class="projects">
- 
-      <!-- ===== CURRENT / IN-PROGRESS · sorted to the top ===== -->
- 
-      <div class="project" data-category="systems">
+
+      <!-- ===== FEATURED · current meta-project ===== -->
+
+      <div class="project project-featured" data-category="systems">
         <div class="project-header">
           <div class="project-name">
-            Distributed Task Scheduler
+            Distributed Microservices Demo Suite
             <span class="cat-tag">systems</span>
+            <span class="cat-tag cat-tag-secondary">web</span>
             <span class="current-tag">current</span>
           </div>
-          <div class="project-tech">Go · goroutines · fault tolerance</div>
+          <div class="project-tech">Node.js · Go · Python · C · MongoDB · Docker</div>
         </div>
         <div class="project-desc">
-          A small Go service that schedules and dispatches tasks across multiple worker nodes, with retries and failover when a worker drops out. Building it to deepen what I learned from the Raft project — coordination, partial failure, and keeping work moving when something goes wrong.
+          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degradation when something fails.
+          <div class="microservices">
+            <div class="microservice">
+              <div class="microservice-name">
+                <!-- <span class="microservice-lang">Node.js</span> -->
+                Gateway
+              </div>
+              <div class="microservice-role">Single entry point for incoming requests. Routes traffic to the right service and logs request metadata to MongoDB.</div>
+            </div>
+            <div class="microservice">
+              <div class="microservice-name">
+                <!-- <span class="microservice-lang">Go</span> -->
+                Health Node
+              </div>
+              <div class="microservice-role">Watches every other service and works with the Gateway to keep the system honest about what's online and responsive.</div>
+            </div>
+            <div class="microservice">
+              <div class="microservice-name">
+                <!-- <span class="microservice-lang">Python</span> -->
+                Invoice Service
+              </div>
+              <div class="microservice-role">for creating and formatting invoices from raw data.</div>
+            </div>
+            <div class="microservice">
+              <div class="microservice-name">
+                <!-- <span class="microservice-lang">C</span> -->
+                Performance Monitor
+              </div>
+              <div class="microservice-role">Tracks and reports system resource usage.</div>
+            </div>
+          </div>
+          <p class="microservices-footnote">
+            <strong>On reliability:</strong> The Gateway and Health Node are single points of failure in this basic setup. The real-world fix is redundancy; multiple Gateways with instant failover, and a consensus-based Health Node cluster that votes on a leader (directly applying what I learned from the Raft project). Future work will include timeouts and retries, circuit breakers for repeatedly-failing downstreams, and a database fallback so the Gateway keeps running even when MongoDB is down.
+          </p>
+          <p class="microservices-folders">
+            Repo structure: <code>/api-gateway</code> · <code>/health-node</code> · <code>/invoice-service</code> · <code>/performance-monitor</code>
+          </p>
           <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
+            <a class="repo-link" href="https://github.com/LeviShinmon/distributed-microservices-demo-suite" target="_blank">⎘ view repo</a>
           </div>
         </div>
       </div>
- 
-      <div class="project" data-category="systems">
-        <div class="project-header">
-          <div class="project-name">
-            Real-Time Resource Monitor
-            <span class="cat-tag">systems</span>
-            <span class="current-tag">current</span>
-          </div>
-          <div class="project-tech">C · system calls · WebSocket dashboard</div>
-        </div>
-        <div class="project-desc">
-          A lightweight monitor in C that samples CPU and memory usage in real time and pushes the readings to a browser dashboard over WebSockets. Configurable thresholds trigger live web notifications — useful for catching runaway processes without a heavyweight tool like htop or Grafana.
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
-        </div>
-      </div>
- 
-      <div class="project" data-category="systems">
-        <div class="project-header">
-          <div class="project-name">
-            Minimalist API Gateway
-            <span class="cat-tag">systems</span>
-            <span class="current-tag">current</span>
-          </div>
-          <div class="project-tech">Go · HTTP routing · middleware</div>
-        </div>
-        <div class="project-desc">
-          A small reverse-proxy / gateway that routes incoming requests to different mock downstream services based on URL path. Designed to be a teaching tool for myself first: middleware chaining, request/response transformation, and graceful handling when a downstream is unavailable.
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
-        </div>
-      </div>
- 
-      <div class="project" data-category="web">
-        <div class="project-header">
-          <div class="project-name">
-            Business Process Automation Tool
-            <span class="cat-tag">web</span>
-            <span class="current-tag">current</span>
-          </div>
-          <div class="project-tech">Python · Flask · Google Sheets API · PDF generation</div>
-        </div>
-        <div class="project-desc">
-          A Python-based dashboard that automates a recurring business task end-to-end — for example, pulling line items from a Google Sheet and generating a styled invoice PDF, or maintaining a simple inventory view that updates as stock changes. Built with small Buffalo-area businesses in mind.
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
-        </div>
-      </div>
- 
+
+      <!-- ===== OTHER CURRENT WORK ===== -->
+
       <div class="project" data-category="web">
         <div class="project-header">
           <div class="project-name">
@@ -319,18 +299,38 @@
             <span class="cat-tag">web</span>
             <span class="current-tag">current</span>
           </div>
-          <div class="project-tech">JavaScript · React · Figma · QA</div>
+          <div class="project-tech">TypeScript · React · Figma </div>
         </div>
         <div class="project-desc">
-          Current production-side work as a Software Engineer at a healthtech startup.
-          <ul>
-            <li>Responsive feedback modal that maintains consistency across mobile and desktop</li>
-            <li>Dashboard features: organization contact dates, deletion controls, rating-based filters</li>
-            <li>All work follows Figma designs and team QA criteria</li>
-          </ul>
+          Nara's pitch is continuous mental health care. I haven't worked much on the member-facing side of the product yet, but I've contributed across the parts that make it run: the tools providers use to deliver care, the dashboards org admins use to manage it, and the systems the Nara team uses to keep everything moving.
+
+          <div class="impact-group">
+            <div class="impact-group-label">For providers</div>
+            <p class="impact-paragraph">
+              I added a way to filter AI-chat sessions by client rating so low-rated interactions are noticed immediately, which lets a provider catch a struggling client <em>before</em> the next session. I also flagged high-risk journal entries alongside other risk indicators, displayed client feedback on the provider detail page, and helped the AI chatbot reference user journals, mood check-ins, and gratitude logs to tailor conversations to the user.
+            </p>
+          </div>
+
+          <div class="impact-group">
+            <div class="impact-group-label">For org admins</div>
+            <p class="impact-paragraph">
+              Plan selection and a default session count on org creation let the dashboard handle both billing models (bulk and pay-per-invite) without manual input. A required organization-type field captures what kind of org is being onboarded, and minimum seats with an adjustable annual fee set baseline billing automatically. I also gated dashboard metrics behind a user threshold so admins don't see misleading numbers before there's real data, and built an in-context feedback popup that centralizes admin feedback into the main table.
+            </p>
+          </div>
+
+          <div class="impact-group">
+            <div class="impact-group-label">For the Nara team</div>
+            <p class="impact-paragraph">
+              Contact-date tracking shows when an org first reached out, helping the team prioritize warm leads. Deletion controls let admins clean up duplicate or accidental org entries instead of just rejecting them. And a user-type column on the feedback table tags every submission as coming from a member, org admin, or provider, so feedback can actually be routed and patterned instead of treated as one bucket.
+            </p>
+          </div>
+
+          <p class="impact-process">
+            <span class="inline-accent">// process:</span> all work follows Figma designs and team QA criteria.
+          </p>
         </div>
       </div>
- 
+
       <div class="project" data-category="web">
         <div class="project-header">
           <div class="project-name">
@@ -341,30 +341,29 @@
           <div class="project-tech">Bug fixes · feature work · internal tooling</div>
         </div>
         <div class="project-desc">
-          Contributing to the University at Buffalo CSE department's in-house scrum board — a tool the department built and uses to track its own engineering work. Fixing live bugs and adding new features for an existing user base, which means reading other people's code first, working within the existing architecture, and shipping changes carefully.
+          Contributing to the University at Buffalo CSE department's in-house scrum board. Fixing live bugs and adding new features for an existing user base, which means reading other people's code & documentation first, working within the existing architecture, and shipping changes carefully.
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <!-- ===== DISTRIBUTED SYSTEMS — completed coursework ===== -->
- 
+
       <div class="project" data-category="systems">
         <div class="project-header">
           <div class="project-name">Consensus Server Cluster <span class="cat-tag">systems</span></div>
           <div class="project-tech">Go · Raft · RPC</div>
         </div>
         <div class="project-desc">
-          Built a Raft consensus cluster in Go with full leader election, log replication, and crash-recovery — tolerant of both clean restarts and partial state loss.
+          Built a Raft-inspired consensus cluster in Go with full leader election, log replication, and crash-recovery. Tolerant of both clean restarts and partial state loss.
           <ul>
             <li>Implemented leader election with election timeouts and term-based voting</li>
             <li>Log replication with consistency checks across follower nodes</li>
             <li>Recovery logic that handles partial state loss on restart</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <div class="project" data-category="systems">
         <div class="project-header">
           <div class="project-name">Distributed Hash Table (Kademlia) <span class="cat-tag">systems</span></div>
@@ -377,49 +376,43 @@
             <li>Implemented RPC-based node communication for iterative lookups</li>
             <li>Content-addressing and fault-tolerant data storage across the network</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <div class="project" data-category="systems">
         <div class="project-header">
           <div class="project-name">Message Service &amp; Failure Detector <span class="cat-tag">systems</span></div>
           <div class="project-tech">Go · TCP sockets · Protobuf · channels</div>
         </div>
         <div class="project-desc">
-          Implemented a multi-process message service, then used that service to build a heartbeat-based failure detector on top of it.
+          Implemented a multi-process message service, then used that service to build a heartbeat-based failure detector.
           <ul>
             <li>TCP sockets for cross-network process communication</li>
             <li>Go channels for in-process communication and coordination</li>
             <li>Protobuf protocol buffers for data serialization between processes</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <div class="project" data-category="systems">
         <div class="project-header">
           <div class="project-name">Dynamic Memory Allocator <span class="cat-tag">systems</span></div>
           <div class="project-tech">C · mutexes · concurrency</div>
         </div>
         <div class="project-desc">
-          Developed a dynamic, concurrent memory allocator using mutexes and locks to manage allocation, deallocation, and reallocation safely under contention.
+          Developed a dynamic, concurrent memory allocator using mutexes and locks to manage allocation, deallocation, and reallocation.
           <ul>
-            <li>Thread-safe alloc / free / realloc via mutex-guarded data structures</li>
+            <li>Thread-safe allocation, freeing, and reallocation under contention</li>
             <li>Optimized for low fragmentation and reuse of freed blocks</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <!-- ===== WEB — completed ===== -->
- 
+
       <div class="project" data-category="web">
         <div class="project-header">
           <div class="project-name">ChatAppX — Real-time Chat &amp; Video <span class="cat-tag">web</span></div>
@@ -429,117 +422,114 @@
           A real-time web app for text and video chat, with security as a first-class concern.
           <ul>
             <li>HTML injection prevention, salted password hashing, XSRF &amp; auth tokens</li>
-            <li>Direct peer-to-peer connections via WebSockets — video chat keeps working through server crashes</li>
+            <li>Direct peer-to-peer connections via WebSockets so video chat keeps working through server crashes</li>
             <li>Secure file uploads with content sanitization and validation</li>
             <li>Comprehensive form validation and error handling</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <div class="project" data-category="web">
         <div class="project-header">
           <div class="project-name">Fresumes — Free Resume Platform <span class="cat-tag">web</span></div>
           <div class="project-tech">Node · MongoDB · JSX · Figma</div>
         </div>
         <div class="project-desc">
-          Cross-sprint contributions on a real product. Worked the full feature loop — user stories, Figma wireframes, acceptance tests, then implementation.
+          For the Experiential Learning & Research class at UB. Worked on code documentation, user stories & acceptance tests, Figma wireframes mostly and a few implementations.
           <ul>
-            <li>Designed key features: multi-page resume view, automatic resume display, filters, ad slots, AI interview interface</li>
-            <li>Built real-time multi-resume upload</li>
-            <li>Integrated a feedback system with automated email routing</li>
+            <li>Designed key features: multiple resume uploads with automatic resume display, multi-page resume view, resume filters, ad slots, AI interview interface</li>
+            <li>Implemented real-time multiple resume uploads and integrated a feedback system with automated email routing</li>
           </ul>
-          <div class="project-actions">
-            <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a>
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
- 
+
       <!-- ===== FUN &amp; DEMOS ===== -->
- 
+
       <div class="project" data-category="fun">
         <div class="project-header">
           <div class="project-name">Simon's Game <span class="cat-tag">fun</span></div>
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          The classic memory game — repeat the sequence of lights and sounds. Built to practice event-driven JS and DOM manipulation.
+          Repeat the sequence of lights and sounds. Built to practice event-driven JS and DOM manipulation. Try beating my personal record of 21 rounds.
           <div class="project-actions">
             <a class="play-link" href="mini-projects/Simon+Game+Challenge+Starting+Files/Simon Game Challenge Starting Files/index.html" target="_blank">▶ play game</a>
           </div>
         </div>
       </div>
- 
+
       <div class="project" data-category="fun">
         <div class="project-header">
           <div class="project-name">Dice Game <span class="cat-tag">fun</span></div>
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          Two-player dice roll — the higher number wins. A small exercise in randomness, image swapping, and clean conditional UI.
+          Two-player dice roll — the higher number wins. You and your buddy choose your player, and whoever wins pays for lunch or something.
           <div class="project-actions">
             <a class="play-link" href="mini-projects/Dicee+Challenge+-+Starting+Files/dicee.html" target="_blank">▶ play game</a>
           </div>
         </div>
       </div>
- 
+
       <div class="project" data-category="fun">
         <div class="project-header">
           <div class="project-name">Drum Kit <span class="cat-tag">fun</span></div>
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          An interactive drum kit — make beats with your keyboard or by clicking the pads. Covers keyboard events, audio playback, and animated button feedback.
+          Make beats with your keyboard or by clicking the pads. Covers keyboard events, audio playback, and animated button feedback.
           <div class="project-actions">
             <a class="play-link" href="mini-projects/Drum+Kit+Starting+Files/Drum Kit Starting Files/index.html" target="_blank">▶ try it</a>
           </div>
         </div>
       </div>
- 
+
       <!-- ===== TOOLS &amp; MISC ===== -->
- 
+
       <div class="project" data-category="tools">
         <div class="project-header">
           <div class="project-name">This Interactive Resume <span class="cat-tag">tools</span></div>
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          The site you're reading. Hand-built layout with custom animations, a filter system, a command-palette top bar, and a light/dark theme toggle — no frameworks, no templates.
+          The site you're reading, built with just HTML/CSS/JS. I hope you enjoy using it! Try the command input at the top: <kbd class="inline-kbd">tree projects</kbd> works.
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/LeviShinmon/InteractiveResume" target="_blank">⎘ view repo</a>
+          </div>
         </div>
       </div>
- 
+
     </div>
   </section>
- 
+
   <section class="section" id="process" aria-label="Process and practice">
     <div class="cmd"><span class="prompt">cat</span> process.md <span class="out"># how this site was built</span></div>
     <p class="process-intro">
-      This site itself is a project. So I built it the way I'd build anything else — paying attention to <span class="inline-accent">how</span> as much as <span class="inline-accent">what</span>. Below are the practices that shaped it.
+      There are many things to consider when creating anything. Below are the practices that shaped the building of this website
     </p>
- 
+
     <div class="process-grid">
       <div class="process-col">
         <h3 class="process-col-title">
           <span class="process-col-tag">// process</span>
-          Agile, scaled to one
+          Somewhat Agile
         </h3>
-        <p class="process-col-blurb">Solo project, but built like a real one: scoped iterations and feedback-driven rework over big-bang releases.</p>
+        <p class="process-col-blurb">I did my best to put the skills I learned to practice without being too stiff considering that this is a solo project</p>
         <ul class="process-list">
-          <li><strong>Iterative scope</strong> — features shipped in small, reviewable slices (content fixes → layout → projects → polish), not one giant rewrite.</li>
-          <li><strong>Feedback loops</strong> — every visible feature went through a "build, review, refine" pass before being kept. The filter chips, command input, and color scheme all changed mid-build because of testing.</li>
-          <li><strong>Honest scoping</strong> — features that weren't worth the cost (autoplay video, full image lightbox) were cut rather than half-shipped.</li>
-          <li><strong>Coursework</strong> — formal agile practice from UB's <em>Software Engineering Concepts</em> course: user stories, sprints, acceptance tests, Scrum ceremonies.</li>
+          <li><strong>Iterative</strong> — I shipped features in small, reviewable slices (content fixes → layout → projects → polish). No one giant rewrite.</li>
+          <li><strong>Feedback loops</strong> — most features went through a "build, review, refine" pass before being kept. I was able to get feedback from some faculty and friends along the way (and some usability testing).</li>
+          <li><strong>Coursework</strong> — used agile/scrum practice from UB's <em>Software Engineering Concepts</em> course</li>
         </ul>
       </div>
- 
+
       <div class="process-col">
         <h3 class="process-col-title">
           <span class="process-col-tag">// a11y</span>
-          Accessibility, not as an afterthought
+          Making Accessibility a habit
         </h3>
-        <p class="process-col-blurb">Informed by UB's <em>Applied Human-Computer Interaction Design</em> course. You can test these — they aren't claims.</p>
+        <p class="process-col-blurb">Informed by UB's <em>Applied Human-Computer Interaction and Interface Design</em> course, I picked a few accessibility metrics and made the website comply with them.</p>
         <ul class="process-list">
           <li><strong>Keyboard navigable</strong> — try <kbd>Tab</kbd> through the page; every interactive element is reachable and has a visible focus ring. <kbd>/</kbd> jumps straight to the command input.</li>
           <li><strong>Semantic HTML</strong> — proper landmarks (<code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>), heading hierarchy, ARIA labels on icon-only controls.</li>
@@ -549,7 +539,7 @@
       </div>
     </div>
   </section>
- 
+
   <section class="section" id="certs" aria-label="Certifications">
     <div class="cmd"><span class="prompt">cat</span> certifications.txt <span class="out"># verified credentials</span></div>
     <div class="cert-grid">
@@ -565,7 +555,7 @@
       </a>
     </div>
   </section>
- 
+
   <section class="section" id="contact" aria-label="Contact">
     <div class="cmd"><span class="prompt">echo</span> "let's build something"</div>
     <div class="contact-grid">
@@ -587,14 +577,14 @@
       </a>
     </div>
   </section>
- 
+
   <footer>
-    <div>© 2026 adni onoh · buffalo, ny · <span class="accent">handwritten html / css / js</span></div>
+    <div>© 2026 adni onoh · buffalo, ny · <span class="accent">mostly self-written html / css / js</span></div>
     <div>session uptime: <span id="footerUptime" class="uptime-marker">0:00</span></div>
   </footer>
 </main>
- 
+
 <script src="index.js"></script>
- 
+
 </body>
 </html>
