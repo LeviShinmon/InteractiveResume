@@ -88,7 +88,7 @@
     <div class="about-block">
       <p class="comment">// the short version</p>
       <p>For the last four years I've focused on <span class="inline-accent">systems engineering</span> (more recently distributed systems in particular) and <span class="inline-accent">web development</span>, alongside a concentration in communication.</p>
-      <p>In that time, I've gotten much better thinking about and understanding ideas/tasks from a software perspective, while still being able to communicate effectively with non-technical people. I like to think of it as being bilingual! (this is most likely cope because the only language I can speak is English)</p>
+      <p>In this time, I've gotten much better thinking about and understanding ideas/tasks from a software perspective, while still being able to communicate effectively with non-technical people. I like to think of it as being bilingual! (most likely cope because I have been unsuccessful at learning any languages other than English)</p>
       <p class="comment">// status: open to roles starting fall 2026</p>
     </div>
 
@@ -121,8 +121,8 @@
         <div class="entry-title">Software Engineer <span class="at">@ Nara Therapy</span></div>
         <div class="entry-role">healthtech · agile · full-stack</div>
         <div class="entry-desc">
-          Working at a fast-paced startup with an agile team building features to help people care for their mental health better. 
-          <p>(<a class="tagline-link" href="#projects">see Nara Therapy - Production Features in the projects section below ↓</a>)</p>
+          Working at a fast-paced startup with an agile team building features to give people continuous mental health tools that help <em>before, during, and after</em> a session.
+          <p>(<a class="tagline-link" href="#projects">see Nara Therapy - Production Features in the projects section below</a>)</p>
           <!-- Building production features on a healthcare web app inside an agile team. Recent work:
           <ul>
             <li>Developed a responsive feedback modal that captures user insights while keeping interface consistency across mobile and desktop.</li>
@@ -251,7 +251,7 @@
           <div class="project-tech">Node.js · Go · Python · C · MongoDB · Docker</div>
         </div>
         <div class="project-desc">
-          Pulling everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degredation when something fails.
+          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degredation when something fails.
           <div class="microservices">
             <div class="microservice">
               <div class="microservice-name">
@@ -306,12 +306,77 @@
           <div class="project-tech">JavaScript · React · Figma · QA</div>
         </div>
         <div class="project-desc">
-          Current production-side work as a Software Engineer at a healthtech startup. Here are a few things I've contributed to:
-          <ul>
-            <li>Responsive feedback modal that maintains consistency across mobile and desktop</li>
-            <li>Dashboard features: organization contact dates, editing & deletion controls, rating-based filters to help providers identify low-rated sessions efficiently</li>
-            <li>All work follows Figma designs and team QA criteria</li>
-          </ul>
+          Nara's whole pitch is continuous mental health care. Three groups have to trust the platform for that to work: the <span class="inline-accent">members</span> getting care, the <span class="inline-accent">providers</span> delivering it, and the <span class="inline-accent">org admins</span> paying for it. My tickets have spanned all three.
+
+          <div class="impact-group">
+            <div class="impact-group-label">For providers — sharpening the clinical signal</div>
+            <ul class="impact-list">
+              <li>
+                <strong>Display &amp; filter client AI-chat ratings on the provider dashboard.</strong>
+                <span class="impact-detail">Providers can now sort their AI-therapy sessions by client rating and surface low-rated ones immediately. The whole product is built on continuity of care — this lets a provider catch a struggling client <em>before</em> the next session, not after.</span>
+              </li>
+              <li>
+                <strong>Surface high-risk journal entries.</strong>
+                <span class="impact-detail">Patient journals can contain critical risk indicators. Now those entries get flagged consistently with other high-risk sources so providers don't miss them.</span>
+              </li>
+              <li>
+                <strong>Show client feedback on the provider detail page.</strong>
+                <span class="impact-detail">Gives admins visibility into per-provider quality, client experience, and reported concerns in one place — so quality issues surface fast.</span>
+              </li>
+              <li>
+                <strong>Help the AI chatbot reference user data.</strong>
+                <span class="impact-detail">Worked on letting the chatbot pull from journal entries, mood check-ins, and gratitude logs. Conversations stop being generic and start feeling like the AI actually knows the person.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="impact-group">
+            <div class="impact-group-label">For org admins — reducing friction for the customer</div>
+            <ul class="impact-list">
+              <li>
+                <strong>Plan selection &amp; default session count on org creation.</strong>
+                <span class="impact-detail">Organizations have different billing models (bulk vs. pay-per-invite). Supporting both in the dashboard, plus a default session count, removes manual input from the invite flow.</span>
+              </li>
+              <li>
+                <strong>Required organization-type field at creation.</strong>
+                <span class="impact-detail">A new required field that captures what kind of org is being onboarded — sets up future segmentation, reporting, and customization.</span>
+              </li>
+              <li>
+                <strong>Minimum seats &amp; adjustable annual mobile app fee.</strong>
+                <span class="impact-detail">Defines baseline billing rules so admins don't have to set them manually for every new org.</span>
+              </li>
+              <li>
+                <strong>Gate org dashboard metrics behind a minimum user threshold.</strong>
+                <span class="impact-detail">Hides organization-level metrics until there's enough data to mean something. Protects against misleading insights and creates a clear activation moment that nudges admins to invite more users.</span>
+              </li>
+              <li>
+                <strong>In-context feedback popup on the org dashboard.</strong>
+                <span class="impact-detail">Star rating + written feedback captured where admins already are, centralized into the admin feedback table. Closes the loop between paying customers and the team building the product their employees rely on.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="impact-group">
+            <div class="impact-group-label">For the Nara team — better internal velocity</div>
+            <ul class="impact-list">
+              <li>
+                <strong>Organization contact dates on the admin dashboard.</strong>
+                <span class="impact-detail">Shows when an org first contacted Nara. Helps prioritize warm leads — every onboarded org is more employees getting mental health support.</span>
+              </li>
+              <li>
+                <strong>Org deletion controls.</strong>
+                <span class="impact-detail">Lets admins remove duplicate or accidental org entries instead of just rejecting them. Keeps the admin dashboard usable as it scales.</span>
+              </li>
+              <li>
+                <strong>User type column on the feedback table.</strong>
+                <span class="impact-detail">Tags feedback by who sent it — member, org admin, or provider — so the team can route, pattern-spot, and respond effectively instead of treating every comment the same.</span>
+              </li>
+            </ul>
+          </div>
+
+          <p class="impact-process">
+            <span class="inline-accent">// process:</span> all work follows Figma designs and team QA criterias.
+          </p>
         </div>
       </div>
 
@@ -326,6 +391,7 @@
         </div>
         <div class="project-desc">
           Contributing to the University at Buffalo CSE department's in-house scrum board. Fixing live bugs and adding new features for an existing user base, which means reading other people's code & documentation first, working within the existing architecture, and shipping changes carefully.
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -343,9 +409,7 @@
             <li>Log replication with consistency checks across follower nodes</li>
             <li>Recovery logic that handles partial state loss on restart</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -361,9 +425,7 @@
             <li>Implemented RPC-based node communication for iterative lookups</li>
             <li>Content-addressing and fault-tolerant data storage across the network</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -379,9 +441,7 @@
             <li>Go channels for in-process communication and coordination</li>
             <li>Protobuf protocol buffers for data serialization between processes</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -396,9 +456,7 @@
             <li>Thread-safe allocation, freeing, and reallocation under contention</li>
             <li>Optimized for low fragmentation and reuse of freed blocks</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -417,9 +475,7 @@
             <li>Secure file uploads with content sanitization and validation</li>
             <li>Comprehensive form validation and error handling</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -434,9 +490,7 @@
             <li>Designed key features: multiple resume uploads with automatic resume display, multi-page resume view, resume filters, ad slots, AI interview interface</li>
             <li>Implemented real-time multiple resume uploads and integrated a feedback system with automated email routing</li>
           </ul>
-          <div class="project-actions">
-            <!-- <a class="repo-link" href="https://github.com/LeviShinmon" target="_blank">⎘ view repo</a> -->
-          </div>
+          <p class="repo-note">// private repo</p>
         </div>
       </div>
 
@@ -448,7 +502,7 @@
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          Repeat the sequence of lights and sounds. Built to practice event-driven JS and DOM manipulation.
+          Repeat the sequence of lights and sounds. Built to practice event-driven JS and DOM manipulation. Try beating my personal record of 21 rounds.
           <div class="project-actions">
             <a class="play-link" href="mini-projects/Simon+Game+Challenge+Starting+Files/Simon Game Challenge Starting Files/index.html" target="_blank">▶ play game</a>
           </div>
@@ -489,7 +543,10 @@
           <div class="project-tech">HTML · CSS · JavaScript</div>
         </div>
         <div class="project-desc">
-          The site you're reading. Hand-built layout with custom animations, a filter system, a command-palette top bar, and a light/dark theme toggle — no frameworks, no templates.
+          The site you're reading. I hope you enjoy using it! Try the command input at the top: <kbd class="inline-kbd">tree projects</kbd> works.
+          <div class="project-actions">
+            <a class="repo-link" href="https://github.com/LeviShinmon/InteractiveResume" target="_blank">⎘ view repo</a>
+          </div>
         </div>
       </div>
 
@@ -511,7 +568,7 @@
         <p class="process-col-blurb">I did my best to put the skills I learned to practice without being too stiff considering that this is a solo project</p>
         <ul class="process-list">
           <li><strong>Iterative</strong> — I shipped features in small, reviewable slices (content fixes → layout → projects → polish). No one giant rewrite.</li>
-          <li><strong>Feedback loops</strong> — most features went through a "build, review, refine" pass before being kept. I was able to get feedback from some faculty and friends with usability testing.</li>
+          <li><strong>Feedback loops</strong> — most features went through a "build, review, refine" pass before being kept. I was able to get feedback from some faculty and friends along the way (and some usability testing).</li>
           <li><strong>Coursework</strong> — used agile/scrum practice from UB's <em>Software Engineering Concepts</em> course</li>
         </ul>
       </div>
@@ -571,7 +628,7 @@
   </section>
 
   <footer>
-    <div>© 2026 adni onoh · buffalo, ny · <span class="accent">mostly handwritten html / css / js</span></div>
+    <div>© 2026 adni onoh · buffalo, ny · <span class="accent">mostly self-written html / css / js</span></div>
     <div>session uptime: <span id="footerUptime" class="uptime-marker">0:00</span></div>
   </footer>
 </main>

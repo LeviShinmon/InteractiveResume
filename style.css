@@ -9,34 +9,35 @@
   --bg-soft: #1c1c1a;
   --fg: #e8e6df;
   --fg-dim: #9a958a;
-  --fg-faint: #56524a;
-  --accent: #7ec699;      /* sage green — primary (systems, current category indicator) */
+  --fg-faint: #727064;     /* darkened from #56524a for AA contrast on UI labels */
+  --accent: #7ec699;       /* sage green — primary */
   --accent-dim: #5fa97a;
-  --magenta: #d96f9e;     /* tools */
-  --cyan: #7fb3c4;        /* web */
-  --violet: #b794d9;      /* fun & demos */
-  --secondary: #ffb454;   /* warm amber — current status badge, play buttons */
+  --magenta: #d96f9e;      /* tools */
+  --cyan: #7fb3c4;         /* web */
+  --violet: #b794d9;       /* fun & demos */
+  --secondary: #ffb454;    /* warm amber — current status badge, play buttons */
   --red: #e06c75;
   --border: rgba(126, 198, 153, 0.15);
   --grid: rgba(255, 255, 255, 0.025);
 }
 
-/* Light mode — HackerRank-inspired editor palette */
+/* Light mode — HackerRank-inspired editor palette
+   All foreground colors meet WCAG AA (4.5:1 for text, 3:1 for UI). */
 [data-theme="light"] {
   --bg: #f8f9fa;
   --bg-elev: #ffffff;
   --bg-soft: #eef0f3;
   --fg: #1a2734;
   --fg-dim: #5b6573;
-  --fg-faint: #8a93a0;
-  --accent: #2c8d4f;
+  --fg-faint: #737b87;     /* darkened from #8a93a0 for AA on white surfaces */
+  --accent: #247a44;       /* darkened from #2c8d4f to pass AA (4.5+:1 vs white) */
   --accent-dim: #1f6a3a;
   --magenta: #b13f73;
   --cyan: #2d7a8e;
-  --violet: #7c4dac;      /* darker violet for AA contrast on white */
-  --secondary: #c97d2a;
+  --violet: #7c4dac;
+  --secondary: #9e5d10;    /* darkened from #c97d2a to pass AA (4.95:1 vs white) */
   --red: #c44a4a;
-  --border: rgba(44, 141, 79, 0.18);
+  --border: rgba(36, 122, 68, 0.18);
   --grid: rgba(0, 0, 0, 0.025);
 }
 
@@ -53,7 +54,6 @@ body, .window-chrome, .skill-block, .project, .entry, .stat,
    Accessibility
    ============================================================ */
 
-/* Skip-to-content link: invisible until tabbed-to */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -76,8 +76,6 @@ body, .window-chrome, .skill-block, .project, .entry, .stat,
   outline-offset: 2px;
 }
 
-/* Visible focus indicators on every interactive element.
-   :focus-visible only shows the ring for keyboard users, not mouse clicks. */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -89,10 +87,9 @@ input:focus-visible,
   border-radius: 2px;
 }
 .command-input:focus-visible {
-  outline: none; /* caret + colored border is enough; ring would crowd the chrome */
+  outline: none;
 }
 
-/* Respect prefers-reduced-motion: shut off / shorten anything that loops or sweeps */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;
@@ -100,13 +97,9 @@ input:focus-visible,
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  /* Section rise-in: just appear, don't slide */
   .section { opacity: 1; transform: none; }
-  /* Pulse dot: hold steady instead of fading */
   .status::before, .current-tag::before { animation: none; }
-  /* Theme icon: no spin on hover */
   .theme-toggle:hover .theme-icon { transform: none; }
-  /* Bar fill: still works, just instantaneous */
   .bar-fill { transition: width 0.001ms; }
   .bar-fill::after { display: none; }
 }
@@ -130,7 +123,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Subtle scanline / vignette */
 body::before {
   content: '';
   position: fixed;
@@ -166,7 +158,6 @@ body::before {
 .dot-y { background: #ffbd2e; }
 .dot-g { background: #27c93f; }
 
-/* Command input — replaces the static cursor with a real interactive prompt */
 .window-title {
   flex: 1;
   min-width: 0;
@@ -235,7 +226,6 @@ body::before {
 }
 .window-tabs a:hover { color: var(--accent); }
 
-/* Theme toggle */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -342,7 +332,6 @@ body::before {
 }
 @keyframes pulse { 50% { opacity: 0.4; } }
 
-/* Location + live clock — clock sits inline after "buffalo, ny ·" */
 .location-clock {
   display: inline-flex;
   align-items: baseline;
@@ -435,7 +424,6 @@ body::before {
 .inline-accent { color: var(--accent); }
 .inline-current { color: var(--secondary); font-weight: 500; }
 
-/* Stats / quick facts */
 .stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -532,7 +520,6 @@ body::before {
   color: var(--accent);
 }
 
-/* CSS Demo subsection */
 .css-demo { margin-top: 16px; }
 .demo-note {
   background: var(--bg-elev);
@@ -673,7 +660,6 @@ body::before {
 }
 .filter-chip.active .count { background: rgba(255,255,255,0.18); }
 
-/* Current filter — amber to match the current-tag (cross-cuts categories) */
 .filter-chip-current {
   color: var(--secondary);
   border-color: rgba(255, 180, 84, 0.35);
@@ -726,6 +712,7 @@ body::before {
   letter-spacing: 0.05em;
 }
 .project-desc { color: var(--fg-dim); font-size: 13px; max-width: 680px; margin-top: 6px; }
+.project-desc em { color: var(--accent); font-style: normal; }
 .project-desc ul { margin-top: 8px; list-style: none; padding-left: 4px; }
 .project-desc li {
   padding-left: 16px;
@@ -737,6 +724,86 @@ body::before {
   position: absolute;
   left: 0;
   color: var(--accent);
+}
+
+/* Impact groups inside the Nara card — three subsections (providers / org admins / team)
+   each with a small uppercase label and a list of contributions with "why this matters" details */
+.impact-group {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--accent-dim);
+}
+.impact-group-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.impact-list {
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+}
+.impact-list li {
+  padding-left: 16px;
+  margin-bottom: 12px;
+  line-height: 1.55;
+}
+.impact-list li:last-child { margin-bottom: 0; }
+.impact-list li::before {
+  content: '→';
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+}
+.impact-list li strong {
+  color: var(--fg);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 2px;
+}
+.impact-detail {
+  display: block;
+  color: var(--fg-dim);
+  font-size: 12.5px;
+  font-style: italic;
+  padding-left: 0;
+}
+.impact-detail em {
+  color: var(--accent);
+  font-style: normal;
+}
+.impact-process {
+  margin-top: 16px;
+  font-size: 12px;
+  color: var(--fg-faint);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+/* Repo-private note for academic projects without a public repo link */
+.repo-note {
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--fg-faint);
+  font-family: 'IBM Plex Mono', monospace;
+  font-style: italic;
+  opacity: 0.85;
+}
+
+/* Inline kbd for in-prose keyboard hints */
+.inline-kbd {
+  color: var(--fg);
+  background: var(--bg-soft);
+  border: 1px solid var(--border);
+  padding: 1px 6px;
+  font-size: 11px;
+  border-radius: 3px;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* Category tags */
@@ -759,16 +826,12 @@ body::before {
 .project[data-category="fun"] .cat-tag { color: var(--violet); border-color: rgba(183, 148, 217, 0.3); }
 .project[data-category="tools"] .cat-tag { color: var(--magenta); border-color: rgba(217, 111, 158, 0.3); }
 
-/* Secondary cat-tag — used when a project genuinely spans two categories.
-   Always renders in the cyan "web" color since that's the only place we use it now,
-   but the rule overrides whatever the parent's data-category styling sets. */
 .cat-tag-secondary {
   color: var(--cyan) !important;
   border-color: rgba(127, 179, 196, 0.3) !important;
   margin-left: 4px;
 }
 
-/* Featured project — slightly elevated treatment for the showcase card */
 .project.project-featured {
   border-left: 1.5px solid var(--secondary);
   padding-left: 32px;
@@ -777,7 +840,6 @@ body::before {
   border-left-color: var(--secondary);
 }
 
-/* Microservices breakdown grid inside the featured card */
 .microservices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -850,8 +912,6 @@ body::before {
   border: 1px solid var(--border);
 }
 
-/* "Current" status badge — cross-cuts categories, sits next to cat-tag.
-   Amber so it's visually distinct from the green "systems" tag. */
 .current-tag {
   display: inline-flex;
   align-items: center;
@@ -879,11 +939,10 @@ body::before {
   animation: pulse 2s ease infinite;
 }
 [data-theme="light"] .current-tag {
-  background: rgba(201, 125, 42, 0.08);
-  border-color: rgba(201, 125, 42, 0.4);
+  background: rgba(158, 93, 16, 0.08);
+  border-color: rgba(158, 93, 16, 0.4);
 }
 
-/* Project action buttons (play / repo) */
 .project-actions {
   display: flex;
   flex-wrap: wrap;
