@@ -1,2 +1,2 @@
 # InteractiveResume
-My resume website
+My terminal-themed resume website
