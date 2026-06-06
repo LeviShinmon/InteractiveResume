@@ -1,0 +1,4 @@
+# Demo videos — host externally (YouTube / Vimeo) instead of committing to repo
+media/*.mp4
+media/distributed-microservices-demo-video.mp4
+media/ublf-demo-video.mp4
