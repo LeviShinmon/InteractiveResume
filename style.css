@@ -15,7 +15,10 @@
   --magenta: #d96f9e;      /* tools */
   --cyan: #7fb3c4;         /* web */
   --violet: #b794d9;       /* fun & demos */
-  --secondary: #ffb454;    /* warm amber — current status badge, play buttons */
+  --secondary: #ffb454;    /* warm amber — current status badge */
+  /* --highlight: #c08bf0;    violet — highlights heading + card edge */
+  --highlight: #FFDF00;
+  --play: #4fc7d4;         /* teal — play/launch buttons */
   --red: #e06c75;
   --border: rgba(126, 198, 153, 0.15);
   --grid: rgba(255, 255, 255, 0.025);
@@ -36,6 +39,9 @@
   --cyan: #2d7a8e;
   --violet: #7c4dac;
   --secondary: #9e5d10;    /* darkened from #c97d2a to pass AA (4.95:1 vs white) */
+  /* --highlight: #7c3a9e;    violet — AA on white (~5.3:1) */
+  --highlight: #CFB53B;
+  --play: #0e7d8c;         /* teal — AA on white (~4.7:1) */
   --red: #c44a4a;
   --border: rgba(36, 122, 68, 0.18);
   --grid: rgba(0, 0, 0, 0.025);
@@ -612,6 +618,48 @@ body::before {
 }
 
 /* ============================================================
+   Highlights — curated top projects (outside the filter grid)
+   ============================================================ */
+.highlights {
+  margin-bottom: 40px;
+}
+.highlights-head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.highlights-title {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--highlight);
+}
+.highlights-sub {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 12px;
+  font-style: italic;
+  color: var(--fg-faint);
+}
+
+/* Highlight cards: a distinct amber-edged frame, stacked (not in the
+   hairline grid the lower projects share). */
+.highlights .project-highlight {
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-left: 2px solid var(--highlight);
+  margin-bottom: 14px;
+}
+.highlights .project-highlight:last-child { margin-bottom: 0; }
+.highlights .project-highlight:hover { background: var(--bg-soft); }
+
+/* LFAU trust paragraph spacing inside its card */
+.lfau-trust { margin-top: 12px; }
+
+/* ============================================================
    Project filter bar
    ============================================================ */
 .filter-bar {
@@ -659,20 +707,6 @@ body::before {
   border-radius: 2px;
 }
 .filter-chip.active .count { background: rgba(255,255,255,0.18); }
-
-.filter-chip-current {
-  color: var(--secondary);
-  border-color: rgba(255, 180, 84, 0.35);
-}
-.filter-chip-current:hover {
-  color: var(--secondary);
-  border-color: var(--secondary);
-}
-.filter-chip-current.active {
-  background: var(--secondary);
-  color: var(--bg);
-  border-color: var(--secondary);
-}
 
 .projects-note {
   font-family: 'IBM Plex Mono', monospace;
@@ -840,17 +874,24 @@ body::before {
   margin-left: 4px;
 }
 
-.project.project-featured {
-  border-left: 1.5px solid var(--secondary);
-  padding-left: 32px;
-}
-[data-theme="light"] .project.project-featured {
-  border-left-color: var(--secondary);
-}
-
-.microservices {
+/* .microservices {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin: 20px 0 18px;
+} */
+ 
+
+/* .microservice {
+  background: var(--bg);
+  padding: 14px 16px;
+} */
+
+.microservices {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1px;
   background: var(--border);
   border: 1px solid var(--border);
@@ -859,7 +900,10 @@ body::before {
 .microservice {
   background: var(--bg);
   padding: 14px 16px;
+  flex: 1 1 calc(33.333% - 1px);
+  min-width: 260px;
 }
+
 .microservice-name {
   font-size: 13px;
   color: var(--fg);
@@ -969,16 +1013,16 @@ body::before {
   transition: all 0.2s;
 }
 .play-link {
-  color: var(--secondary);
+  color: var(--play);
   background: var(--bg-soft);
-  border: 1px solid rgba(255, 180, 84, 0.25);
+  border: 1px solid rgba(79, 199, 212, 0.25);
 }
 .play-link:hover {
-  background: var(--secondary);
+  background: var(--play);
   color: var(--bg);
-  border-color: var(--secondary);
+  border-color: var(--play);
   transform: translate(-1px, -1px);
-  box-shadow: 2px 2px 0 rgba(255, 180, 84, 0.3);
+  box-shadow: 2px 2px 0 rgba(79, 199, 212, 0.3);
 }
 .repo-link {
   color: var(--accent);

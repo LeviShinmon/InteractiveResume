@@ -72,7 +72,7 @@
       adni <span class="accent">onoh</span>.
     </h1>
     <p class="hero-tagline">
-      Distributed systems engineer and full-stack web developer. Currently interning at a <em>healthtech startup</em> writing software that's helping people track and care for their mental health, building a personal project that combines my web and distributed systems experience (<a class="tagline-link" href="#projects">see Distributed Microservices Demo Suite ↓</a>), and interview prepping.
+      Distributed systems engineer and full-stack web developer. Currently interning at a <em>healthtech startup</em> writing software that's helping people track and take care of their mental health. I am also maintaining and adding features to the University at Buffalo CSE department's scrum board, a system used daily by faculty and hundreds of students (<a class="tagline-link" href="#projects">see Highlights for my best work ↓</a>)
     </p>
     <div class="hero-links">
       <a href="#contact" class="primary">→ get in touch</a>
@@ -123,7 +123,7 @@
         <div class="entry-role">healthtech · agile · full-stack</div>
         <div class="entry-desc">
           <p>Working at a fast-paced startup with an agile team building features to equip people with continuous mental health tools that help <span class="inline-accent"><em>before</em></span>, <span class="inline-accent"><em>during</em></span>, and <span class="inline-accent"><em>after</em></span> a session.</p>
-          <p>(<a class="tagline-link" href="#projects">Nara Therapy - Production Features in the projects section below ↓</a>)</p>
+          <p>(<a class="tagline-link" href="#projects">Nara Therapy - Production Features in the highlights below ↓</a>)</p>
         </div>
       </div>
     </div>
@@ -218,91 +218,130 @@
   </section>
 
   <section class="section" id="projects" aria-label="Projects">
-    <div class="cmd"><span class="prompt">tree</span> projects/ <span class="out"># 13 entries · filter by category</span></div>
+    <div class="cmd"><span class="prompt">tree</span> projects/ <span class="out"># 14 entries · 4 highlighted · filter the rest by category</span></div>
 
-    <div class="filter-bar" role="group" aria-label="Filter projects by category">
-      <span class="filter-label" aria-hidden="true">filter:</span>
-      <button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">all <span class="count">13</span></button>
-      <button class="filter-chip filter-chip-current" data-filter="current" type="button" aria-pressed="false">● current <span class="count">3</span></button>
-      <button class="filter-chip" data-filter="systems" type="button" aria-pressed="false">distributed systems <span class="count">5</span></button>
-      <button class="filter-chip" data-filter="web" type="button" aria-pressed="false">web development <span class="count">4</span></button>
-      <button class="filter-chip" data-filter="fun" type="button" aria-pressed="false">fun &amp; demos <span class="count">3</span></button>
-      <button class="filter-chip" data-filter="tools" type="button" aria-pressed="false">tools &amp; misc <span class="count">1</span></button>
-    </div>
+    <!-- ============================================================
+         HIGHLIGHTS — the four projects worth seeing first.
+         Curated and not part of the filterable grid below.
+         ============================================================ -->
+    <div class="highlights" aria-label="Highlighted projects">
+      <div class="highlights-head">
+        <span class="highlights-title">★ highlights</span>
+        <span class="highlights-sub">// if you only look at four things, look at these</span>
+      </div>
 
-    <p class="projects-note"><span class="inline-accent">// note:</span> OOP principles and Git/GitHub version control applied across all projects. <span class="inline-current">● current</span> marks projects I'm actively building right now.</p>
+      <!-- UB CSE Scrum Board -->
+      <div class="project project-highlight" data-category="web">
+        <div class="project-header">
+          <div class="project-name">
+            UB CSE Scrum Board
+            <span class="cat-tag">web</span>
+            <span class="current-tag">current</span>
+          </div>
+          <div class="project-tech">Bug fixes · feature work · internal tooling</div>
+        </div>
+        <div class="project-desc">
+          Contributing to the University at Buffalo CSE department's in-house scrum board. Fixing live bugs and adding new features for an existing user base, which means reading other people's code & documentation first, working within the existing architecture, and shipping changes carefully.
+          <p class="repo-note">// private repo</p>
+        </div>
+      </div>
 
-    <div class="projects">
-
-      <!-- ===== FEATURED · current meta-project ===== -->
-
-      <div class="project project-featured" data-category="systems">
+      <!-- Distributed Microservices Demo Suite -->
+      <div class="project project-highlight" data-category="systems">
         <div class="project-header">
           <div class="project-name">
             Distributed Microservices Demo Suite
             <span class="cat-tag">systems</span>
-            <span class="cat-tag cat-tag-secondary">web</span>
-            <span class="current-tag">current</span>
+            <span class="cat-tag" style="color: var(--cyan); border-color: rgba(127, 179, 196, 0.3);">web</span>
+            <!-- <span class="current-tag">current</span> -->
           </div>
           <div class="project-tech">Node.js · Go · Python · C · MongoDB · Docker</div>
         </div>
         <div class="project-desc">
-          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, and graceful degradation when something fails.
+          Building everything I've worked on into one system: independent services in different languages, talking through a secure gateway, health monitoring for services, a live web dashboard that surfaces system status, and graceful degradation when something fails.
           <div class="microservices">
             <div class="microservice">
-              <div class="microservice-name">
-                <!-- <span class="microservice-lang">Node.js</span> -->
-                Gateway
-              </div>
+              <div class="microservice-name">Gateway</div>
               <div class="microservice-role">Single entry point for incoming requests. Routes traffic to the right service and logs request metadata to MongoDB.</div>
             </div>
             <div class="microservice">
-              <div class="microservice-name">
-                <!-- <span class="microservice-lang">Go</span> -->
-                Health Node
-              </div>
+              <div class="microservice-name">Health Node</div>
               <div class="microservice-role">Watches every other service and works with the Gateway to keep the system honest about what's online and responsive.</div>
             </div>
             <div class="microservice">
-              <div class="microservice-name">
-                <!-- <span class="microservice-lang">Python</span> -->
-                Invoice Service
-              </div>
-              <div class="microservice-role">for creating and formatting invoices from raw data.</div>
+              <div class="microservice-name">Invoice Service</div>
+              <div class="microservice-role">For creating and formatting invoices from raw data.</div>
             </div>
             <div class="microservice">
-              <div class="microservice-name">
-                <!-- <span class="microservice-lang">C</span> -->
-                Performance Monitor
-              </div>
+              <div class="microservice-name">Performance Monitor</div>
               <div class="microservice-role">Tracks and reports system resource usage.</div>
             </div>
+            <div class="microservice">
+              <div class="microservice-name">Status Dashboard</div>
+              <div class="microservice-role">Webpage that polls the system's health endpoints and shows live status per service.</div>
+            </div>
+            <!-- <div class="microservice">
+              <div class="microservice-name">✦ That's it, folks!</div>
+              <div class="microservice-role">This shouldn't be here but an empty grid just looks off (desktop relevant) </div>
+            </div> -->
           </div>
           <p class="microservices-footnote">
-            <strong>On reliability:</strong> The Gateway and Health Node are single points of failure in this basic setup. The real-world fix is redundancy; multiple Gateways with instant failover, and a consensus-based Health Node cluster that votes on a leader (directly applying what I learned from the Raft project). Future work will include timeouts and retries, circuit breakers for repeatedly-failing downstreams, and a database fallback so the Gateway keeps running even when MongoDB is down.
+            <strong>On reliability:</strong> The Gateway and Health Node are single points of failure in this basic setup. The real-world fix is redundancy; multiple Gateways with instant failover, and a consensus-based Health Node cluster that votes on a leader (directly applying what I learned from the <a class="tagline-link" href="#proj-raft">Raft project ↓</a>). Future work will include timeouts and retries, circuit breakers for repeatedly-failing downstreams, and a database fallback so the Gateway keeps running even when MongoDB is down.
           </p>
           <p class="microservices-folders">
             Repo structure: <code>/api-gateway</code> · <code>/health-node</code> · <code>/invoice-service</code> · <code>/performance-monitor</code>
           </p>
           <div class="project-actions">
+            <!-- TODO: swap href="#" for the real demo video URL once recorded -->
+            <!-- <a class="play-link" href="media/distributed-microservices-demo-video.mp4" target="_blank">▶ watch Status Dashboard demo </a>  -->
+            <a class="play-link" href="https://youtu.be/HS5Vh9q0Cmws" target="_blank">▶ watch Status Dashboard demo </a> 
             <a class="repo-link" href="https://github.com/LeviShinmon/distributed-microservices-demo-suite" target="_blank">⎘ view repo</a>
           </div>
         </div>
       </div>
 
-      <!-- ===== OTHER CURRENT WORK ===== -->
+      <!-- UB Lost & Found (LFAU) -->
+      <div class="project project-highlight" data-category="web">
+        <div class="project-header">
+          <div class="project-name">
+            UB Lost &amp; Found (LFAU)
+            <span class="cat-tag">web</span>
+            <!-- <span class="current-tag">current</span> -->
+          </div>
+          <div class="project-tech">Next.js · TypeScript · Prisma · PostgreSQL · NextAuth · Tailwind · Docker</div>
+        </div>
+        <div class="project-desc">
+          A full-stack prototype proposing a centralized lost-and-found for UB. Right now the university's lost-and-found is split across police, libraries, the student union, and other depots that don't share a list, so a student who loses something has to check each one. This system adds one searchable layer over all of them: staff post found items, students search across every department at once, and the listing tells them where to pick it up.
+          <p class="lfau-trust">
+            The harder part is trust. It's built around a full <em>claim → counterclaim → dispute resolution</em> lifecycle, where ownership is settled by accountability rather than secrecy: every claim is tied to a real UBIT identity, descriptions stay public so claiming is low-friction, and a listing stays open to counterclaims for its whole lifecycle (even after pickup) to deter false claims. Staff resolve contested items by awarding to one party from a department-scoped dashboard.
+          </p>
+          <ul>
+            <li>Role-based access control (student / department staff / admin) with route-level and action-level guards</li>
+            <li>Relational data model for the item lifecycle: available → claimed → disputed → archived, on a per-listing clock</li>
+            <li>Server-side rendering and server actions throughout, with a seeded Postgres database for realistic demo data</li>
+          </ul>
+          <div class="project-actions">
+            <!-- TODO: swap href="#" for the real demo video URL once recorded -->
+            <!-- <a class="play-link" href="media/ublf-demo-video.mp4" target="_blank">▶ watch demo</a>  -->
+            <a class="play-link" href="https://youtu.be/KfjSxxP3aZs" target="_blank">▶ watch demo</a> 
+            <a class="repo-link" href="mailto:adnionoh.dev@gmail.com?subject=LFAU%20repo%20access%20request&amp;body=Hi%20Adni%2C%20I'd%20like%20to%20see%20the%20LFAU%20source.">⎘ request repo access</a>
+          </div>
+          <p class="repo-note">// private repo — source shared on request</p>
+        </div>
+      </div>
 
-      <div class="project" data-category="web">
+      <!-- Nara Therapy — Production Features -->
+      <div class="project project-highlight" data-category="web">
         <div class="project-header">
           <div class="project-name">
             Nara Therapy — Production Features
             <span class="cat-tag">web</span>
             <span class="current-tag">current</span>
           </div>
-          <div class="project-tech">TypeScript · React · Figma </div>
+          <div class="project-tech">TypeScript · React · Figma</div>
         </div>
         <div class="project-desc">
-          Nara's pitch is continuous mental health care. I haven't worked much on the member-facing side of the product yet, but I've contributed across the parts that make it run: the tools providers use to deliver care, the dashboards org admins use to manage it, and the systems the Nara team uses to keep everything moving.
+          Nara's pitch is continuous mental health support. I haven't worked much on the member-facing side yet, but I've contributed across the parts that make it run: the tools providers use to deliver care, the dashboards org admins use to manage it, and the systems the Nara team uses to keep everything moving.
 
           <div class="impact-group">
             <div class="impact-group-label">For providers</div>
@@ -331,24 +370,26 @@
         </div>
       </div>
 
-      <div class="project" data-category="web">
-        <div class="project-header">
-          <div class="project-name">
-            UB CSE Scrum Board
-            <span class="cat-tag">web</span>
-            <span class="current-tag">current</span>
-          </div>
-          <div class="project-tech">Bug fixes · feature work · internal tooling</div>
-        </div>
-        <div class="project-desc">
-          Contributing to the University at Buffalo CSE department's in-house scrum board. Fixing live bugs and adding new features for an existing user base, which means reading other people's code & documentation first, working within the existing architecture, and shipping changes carefully.
-          <p class="repo-note">// private repo</p>
-        </div>
-      </div>
+
+    </div>
+    <!-- end highlights -->
+
+    <div class="filter-bar" role="group" aria-label="Filter projects by category">
+      <span class="filter-label" aria-hidden="true">filter:</span>
+      <button class="filter-chip active" data-filter="all" type="button" aria-pressed="true">all <span class="count">10</span></button>
+      <button class="filter-chip" data-filter="systems" type="button" aria-pressed="false">distributed systems <span class="count">4</span></button>
+      <button class="filter-chip" data-filter="web" type="button" aria-pressed="false">web development <span class="count">2</span></button>
+      <button class="filter-chip" data-filter="fun" type="button" aria-pressed="false">fun &amp; demos <span class="count">3</span></button>
+      <button class="filter-chip" data-filter="tools" type="button" aria-pressed="false">tools &amp; misc <span class="count">1</span></button>
+    </div>
+
+    <p class="projects-note"><span class="inline-accent">// note:</span> the four highlighted projects above sit outside this filter. OOP principles and Git/GitHub version control applied across all projects.</p>
+
+    <div class="projects">
 
       <!-- ===== DISTRIBUTED SYSTEMS — completed coursework ===== -->
 
-      <div class="project" data-category="systems">
+      <div class="project" id="proj-raft" data-category="systems">
         <div class="project-header">
           <div class="project-name">Consensus Server Cluster <span class="cat-tag">systems</span></div>
           <div class="project-tech">Go · Raft · RPC</div>
@@ -529,7 +570,7 @@
           <span class="process-col-tag">// a11y</span>
           Making Accessibility a habit
         </h3>
-        <p class="process-col-blurb">Informed by UB's <em>Applied Human-Computer Interaction and Interface Design</em> course, I picked a few accessibility metrics and made the website comply with them.</p>
+        <p class="process-col-blurb">Informed by UB's <em>Applied Human-Computer Interaction and Interface Design</em> course. The site meets AA contrast site-wide; the highlights section's accents are a deliberate aesthetic choice.</p>
         <ul class="process-list">
           <li><strong>Keyboard navigable</strong> — try <kbd>Tab</kbd> through the page; every interactive element is reachable and has a visible focus ring. <kbd>/</kbd> jumps straight to the command input.</li>
           <li><strong>Semantic HTML</strong> — proper landmarks (<code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>), heading hierarchy, ARIA labels on icon-only controls.</li>
@@ -559,9 +600,9 @@
   <section class="section" id="contact" aria-label="Contact">
     <div class="cmd"><span class="prompt">echo</span> "let's build something"</div>
     <div class="contact-grid">
-      <a class="contact-card" href="mailto:adnionoh@buffalo.edu">
+      <a class="contact-card" href="mailto:adnionoh.dev@gmail.com">
         <div class="contact-card-label">email</div>
-        <div class="contact-card-value">adnionoh@buffalo.edu</div>
+        <div class="contact-card-value">adnionoh.dev@gmail.com</div>
       </a>
       <a class="contact-card" href="tel:+17169866286">
         <div class="contact-card-label">phone</div>

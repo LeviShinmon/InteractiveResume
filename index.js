@@ -106,9 +106,12 @@
 
   /* ============================================================
      3. Project category filter
+     ------------------------------------------------------------
+     Only filters cards in the .projects grid. The Highlights
+     section sits outside this grid and is never filtered.
      ============================================================ */
   const chips = document.querySelectorAll('.filter-chip');
-  const projects = document.querySelectorAll('.project[data-category]');
+  const projects = document.querySelectorAll('.projects .project[data-category]');
 
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
@@ -122,15 +125,7 @@
       chip.setAttribute('aria-pressed', 'true');
 
       projects.forEach(p => {
-        let match;
-        if (filter === 'all') {
-          match = true;
-        } else if (filter === 'current') {
-          // "current" cross-cuts categories — match any project with a current-tag
-          match = p.querySelector('.current-tag') !== null;
-        } else {
-          match = p.dataset.category === filter;
-        }
+        const match = (filter === 'all') || (p.dataset.category === filter);
         p.classList.toggle('hidden', !match);
       });
     });
